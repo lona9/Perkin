@@ -1,12 +1,20 @@
 from time import time
 
 from . import misc
+from . import random
 
 PREFIX = "!"
 
 cmds = {
     "hola": misc.hola,
     "rank": misc.rank,
+    "social": misc.social,
+    "rol": random.rol,    
+    "jg": random.jg,
+    "mid": random.mid,
+    "supp": random.supp,
+    "adc": random.adc,
+    "top": random.top
 }
 
 def process(bot, user, message):
