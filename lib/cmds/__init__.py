@@ -1,5 +1,3 @@
-from time import time
-
 from . import misc
 from . import random
 
@@ -9,12 +7,13 @@ cmds = {
     "hola": misc.hola,
     "rank": misc.rank,
     "social": misc.social,
-    "rol": random.rol,    
+    "rol": random.rol,
     "jg": random.jg,
     "mid": random.mid,
     "supp": random.supp,
     "adc": random.adc,
-    "top": random.top
+    "top": random.top,
+    "check": misc.check,
 }
 
 def process(bot, user, message):

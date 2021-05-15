@@ -7,6 +7,9 @@ def help(bot, prefix, cmds):
 def hola(bot, user, *args):
     bot.send_message(f"Hola, {user['name']}!")
 
+def check(bot, user, *args):
+    bot.send_message("¡Aquí estoy!")
+
 def social(bot, user, *args):
   bot.send_message("Tik Tok: @blvebetta")
 
@@ -35,5 +38,3 @@ def rank(bot, user, *args):
 
         except:
             bot.send_message("No existe ese usuario o no tiene nivel de clasificatoria.")
-
-

@@ -2,7 +2,7 @@ import random
 
 def rol(bot, user, *args):
   roles = ["jungla", "adc", "supp", "top", "mid"]
-  
+
   bot.send_message(f"Te toca jugar: {random.choice(roles)}")
 
 def jg(bot, user, *args):
@@ -27,5 +27,5 @@ def top(bot, user, *args):
 
 def mid(bot, user, *args):
   mid = ["Aatrox", "Ahri", "Akali", "Anivia", "Annie", "Aurelion Sol", "Azir", "Camille", "Cassiopeia", "Cho'Gath", "Corki", "Diana", "Ekko", "Fizz", "Galio", "Garen", "Heimerdinger", "Irelia", "Ivern", "Jayce", "Kassadin", "Katarina", "LeBlanc", "Lillia", "Lissandra", "Lucian", "Lux", "Malphite", "Malzahar", "Neeko", "Nocturne", "Nunu", "Orianna", "Pantheon", "Qiyana", "Renekton", "Rumble", "Ryze", "Swain", "Sylas", "Syndra", "Talon", "Twisted Fate", "Veigar", "Vel'Koz", "Viktor", "Vladimir", "Xerath", "Yasuo", "Zed", "Ziggs", "Zilean", "Zoe"]
-  
+
   bot.send_message(f"Te toca jugar mid con: {random.choice(mid)}")
