@@ -10,6 +10,13 @@ def hola(bot, user, *args):
 def check(bot, user, *args):
     bot.send_message("¡Aquí estoy!")
 
+def shoutout(bot, user, *args):
+    args = str(args[0])
+    print(args)
+    link = str(args[1:])
+    print(link)
+    bot.send_message(f"sigan a @{link}!!! twitch.tv/{link}")
+
 def social(bot, user, *args):
   bot.send_message("Tik Tok: @blvebetta")
 

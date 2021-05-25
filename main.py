@@ -37,7 +37,8 @@ class Bot(SingleServerIRCBot):
             cxn.cap("REQ", f":twitch.tv/{req}")
 
             cxn.join(self.CHANNEL)
-            self.send_message("Conectado!")
+            
+        self.send_message("Conectado!")
 
     def on_pubmsg(self, cxn, event):
         tags = {kvpair["key"]: kvpair["value"] for kvpair in event.tags}
