@@ -37,7 +37,7 @@ class Bot(SingleServerIRCBot):
             cxn.cap("REQ", f":twitch.tv/{req}")
 
             cxn.join(self.CHANNEL)
-            
+
         self.send_message("Conectado!")
 
     def on_pubmsg(self, cxn, event):

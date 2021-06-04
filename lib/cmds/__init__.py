@@ -24,7 +24,8 @@ cmds = [
     Cmd(["adc"], random.adc, cooldown=0),
     Cmd(["suerte", "8ball"], random.suerte, cooldown=0),
     Cmd(["check"], misc.check, cooldown=0),
-    Cmd(["so", "shoutout"], misc.shoutout, cooldown=0)
+    Cmd(["so", "shoutout"], misc.shoutout, cooldown=0),
+    Cmd(["aery"], misc.aery, cooldown=0)
 ]
 
 def process(bot, user, message):

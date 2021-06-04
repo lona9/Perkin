@@ -20,6 +20,9 @@ def shoutout(bot, user, *args):
 def social(bot, user, *args):
   bot.send_message("Tik Tok: @blvebetta")
 
+def aery(bot, user, *args):
+  bot.send_message("Puedes invitar a Aery a tu server de Discord con el siguiente link: https://discord.com/oauth2/authorize?client_id=804475973579833374&permissions=1074121728&scope=bot")
+
 def rank(bot, user, *args):
     if args == ():
         bot.send_message("Debes escribir un nombre de usuario válido para usar este comando.")
