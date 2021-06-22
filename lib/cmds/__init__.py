@@ -11,7 +11,6 @@ class Cmd(object):
         self.cooldown = cooldown
         self.next_use = time()
 
-
 cmds = [
     Cmd(["hola", "hi", "hello"], misc.hola, cooldown=0),
     Cmd(["rank", "ranking"], misc.rank, cooldown=0),

@@ -22,7 +22,7 @@ class Bot(SingleServerIRCBot):
         self.PORT = 6667
         self.USERNAME = NAME.lower()
         self.CLIENT_ID = "csfc7k2i8fp1lkptj5b1nwms98bcfq"
-        self.TOKEN = "dnufi34sras7wn1mfoc07c3igvi85k"
+        self.TOKEN = "zkqvuq64hm3tiouk0b04dpjsk3acz5"
         self.CHANNEL = f"#{OWNER}"
 
         url = f"https://api.twitch.tv/kraken/users?login={self.USERNAME}"
@@ -33,20 +33,20 @@ class Bot(SingleServerIRCBot):
         super().__init__([(self.HOST, self.PORT, f"oauth:{self.TOKEN}")], self.USERNAME, self.USERNAME)
 
     def on_welcome(self, cxn, event):
+        print("starting on welcome")
         for req in ("membership", "tags", "commands"):
             cxn.cap("REQ", f":twitch.tv/{req}")
-
             cxn.join(self.CHANNEL)
 
         self.send_message("Conectado!")
+        print("conectado!")
 
     def on_pubmsg(self, cxn, event):
         tags = {kvpair["key"]: kvpair["value"] for kvpair in event.tags}
         user = {"name": tags["display-name"], "id": tags["user-id"]}
         message = event.arguments[0]
 
-        if user["name"] != NAME:
-            cmds.process(bot, user, message)
+        cmds.process(bot, user, message)
 
     def send_message(self, message):
         self.connection.privmsg(self.CHANNEL, message)
