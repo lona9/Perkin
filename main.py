@@ -13,7 +13,7 @@ from requests import get
 
 from lib import cmds
 
-NAME = "jungperkin"
+NAME = "pececitobot"
 OWNER = "blvebetta"
 
 class Bot(SingleServerIRCBot):
@@ -22,7 +22,7 @@ class Bot(SingleServerIRCBot):
         self.PORT = 6667
         self.USERNAME = NAME.lower()
         self.CLIENT_ID = "csfc7k2i8fp1lkptj5b1nwms98bcfq"
-        self.TOKEN = "zkqvuq64hm3tiouk0b04dpjsk3acz5"
+        self.TOKEN = "wi2su1arv0nm50oggrigvu039uqbpy"
         self.CHANNEL = f"#{OWNER}"
 
         url = f"https://api.twitch.tv/kraken/users?login={self.USERNAME}"
